@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+#date-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+#date-selector button {
+  background: #eee;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#current-date {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#filter-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+#filter-input {
+  flex: 1;
+  max-width: 300px;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+#settings-btn {
+  background: #eee;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#settings-panel {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  max-width: 400px;
+  margin: 1em auto;
+}
+#settings-panel.hidden {
+  display: none;
+}
+#column-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.toggle-switch input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.toggle-switch input[type="checkbox"]:checked {
+  background: #4caf50;
+}
+.toggle-switch input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transition: left 0.2s;
+}
+.toggle-switch input[type="checkbox"]:checked::before {
+  left: 22px;
+}
+#movies-table-section {
+  overflow-x: auto;
+  margin: 1em;
+}
+#movies-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+#movies-table th, #movies-table td {
+  padding: 0.5em;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+#movies-table th {
+  background: #f0f0f0;
+}
+.showtime-box {
+  display: inline-block;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  padding: 0.2em 0.5em;
+  margin: 0.1em;
+  background: #e8f5e9;
+  font-size: 0.95em;
+}
+.format-nonstandard {
+  font-weight: bold;
+  color: #d32f2f;
+}
+.row-watched {
+  background: #c8e6c9 !important;
+}
+.row-not-interested {
+  background: #ffeaea !important;
+  color: #aaa;
+}
+.watched {
+  background: #c8e6c9;
+}
+.not-interested {
+  color: #aaa;
+  background: #f5f5f5;
+}
+.action-toggle {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2em;
+  margin: 0 0.2em;
+}
+@media (max-width: 600px) {
+  #movies-table th, #movies-table td {
+    font-size: 0.95em;
+    padding: 0.3em;
+  }
+  #settings-panel {
+    max-width: 95vw;
+  }
+}
