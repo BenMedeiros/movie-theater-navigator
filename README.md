@@ -2,6 +2,8 @@
 
 A static, mobile-friendly web app for browsing movie showtimes and ratings from Cinemark theaters.
 
+**Live Demo:** [https://benmedeiros.github.io/movie-theater-navigator/](https://benmedeiros.github.io/movie-theater-navigator/)
+
 ## Features
 - Parses Cinemark HTML to generate `movies.json` and `showtimes.json` (Python script)
 - Displays showtimes in a responsive table with advanced filtering and column toggles
